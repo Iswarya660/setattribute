@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage</title>
+</head>
+<style>
+    .heading{
+        color:aqua;
+        font-style: italic;
+        font-size: medium;
+        background-color: blueviolet;
+    }
+</style>
+<body>
+    <h1>we are creating classList</h1>
+    <button onclick="styles()">styles</button>
+    <button onclick="addStyles()">addStyles</button>
+    <button onclick="removeStyles()">removeStyles</button>
+</body>
+<script>
+    function addStyles(){
+        let head_ele=document.getElementsByTagName("h1")
+         head_ele[0].classList.add("heading")
+        // head_ele[0].setAttribute("id","heading")
+        // head_ele[0].setAttribute("class","heading")
+    }
+    function removeStyles(){
+    let head_ele=document.getElementsByTagName("h1")
+       head_ele[0].classList.remove("heading")
+
+
+     }
+     function styles(){
+        console.log("trigger")
+        document.getElementsByTagName("h1")
+        [0].classList.toggle("heading")
+     }
+</script>
+</html>
